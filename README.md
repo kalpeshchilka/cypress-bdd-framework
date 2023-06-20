@@ -12,7 +12,7 @@ This Project automates cypress todo website - https://example.cypress.io/todo us
 - Install the project dependencies by running command: `npm install`
 
 ## Run Test
-- Open the Cypress console by running command: `npm run cy:open`
+- Open the Cypress console by running command: `npx run cy:open`
 - Run the test on Chrome browser using cucumber bdd using command: `npm run bdd:test`
 
 ## Mochawesome Report
