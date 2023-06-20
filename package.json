@@ -1,0 +1,37 @@
+{
+  "name": "cypress-bdd-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bdd:tests:obselete": "npx cypress-tags run --browser chrome --headless --config-file cypress.config.js -e TAGS='@Prod' || true",
+    "bdd:test": "npx cypress run --env tags='@Prod' || true && node report.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "filterSpecs": true,
+    "json": {
+      "enabled": true
+    }
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@bahmutov/cypress-esbuild-preprocessor": "latest",
+    "cypress": "^12.14.0",
+    "cypress-localstorage-commands": "^1.4.4",
+    "cypress-real-events": "^1.7.1",
+    "cypress-tags": "^1.1.2",
+    "cypress-wait-until": "^1.7.1",
+    "cypress-xpath": "^1.6.2",
+    "cucumber-html-reporter": "^5.2.0",
+    "cypress-multi-reporters": "1.6.3",
+    "cypress-parallel": "^0.12.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.2",
+    "faker": "^5.5.3",
+    "fs-extra": "^9.1.0"
+  }
+}
